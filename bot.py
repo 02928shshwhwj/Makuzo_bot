@@ -101,7 +101,7 @@ def send_url(message):
  for vid in playlist.video_urls[:]:
   url = YouTube(vid)
   link = url.streams.first()
-  if link.filesize >= 52428800:
+  if link.filesize >= 520428800:
    bot.send_message(message.chat.id, f'Sorry, This video is bigger than 50MB , {vid}       Here is its link if you want to download it manually')
    continue
   else:
